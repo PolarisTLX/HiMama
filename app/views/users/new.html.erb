@@ -1,0 +1,14 @@
+<h1>Users#new</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.text_field :name, placeholder: 'Your Name' %>
+
+    <%= f.text_field "Clock-in" %>
+<% end %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <%= f.name :name, placeholder: 'Your Name' %>
+
+    <%= f.submit "Clock-out" %>
+<% end %>
