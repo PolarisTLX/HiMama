@@ -1,14 +1,12 @@
 class TeachersController < ApplicationController
   before_action :set_teacher, only: [:show, :edit, :update, :destroy]
 
-  # GET /teachers
-  # GET /teachers.json
+  # GET verb for all teachers.  Address: /teachers
   def index
     @teachers = Teacher.all
   end
 
-  # GET /teachers/1
-  # GET /teachers/1.json
+  # GET verb. Address: /teachers/[teacher-id-number]
   def show
   end
 
@@ -17,12 +15,11 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new
   end
 
-  # GET /teachers/1/edit
+  # GET verb.  Address: /teachers/[teacher-id-number]/edit
   def edit
   end
 
-  # POST /teachers
-  # POST /teachers.json
+  # POST verb
   def create
     @teacher = Teacher.new(teacher_params)
 
@@ -37,8 +34,7 @@ class TeachersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /teachers/1
-  # PATCH/PUT /teachers/1.json
+  # PATCH/PUT verb
   def update
     respond_to do |format|
       if @teacher.update(teacher_params)
@@ -51,8 +47,7 @@ class TeachersController < ApplicationController
     end
   end
 
-  # DELETE /teachers/1
-  # DELETE /teachers/1.json
+  # DELETE verb
   def destroy
     @teacher.destroy
     respond_to do |format|
@@ -62,12 +57,11 @@ class TeachersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    # Before_action callback method:
     def set_teacher
       @teacher = Teacher.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def teacher_params
       params.require(:teacher).permit(:name, :start, :end)
     end

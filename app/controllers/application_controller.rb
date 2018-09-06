@@ -1,7 +1,8 @@
 class ApplicationController < ActionController::Base
 
-  def main
-    render html: "Hello World"
-  end
+  # method just to test initial application setup
+  # def main
+  #   render html: "Hello World"
+  # end
 
 end
