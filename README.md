@@ -1,24 +1,48 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Check it out live on Heroku:    [https://himama-clock.herokuapp.com/](https://himama-clock.herokuapp.com/)
 
-Things you may want to cover:
+## Basic Teacher Shift Tracking App
+* Teachers can Enter their name
+* Set their Clock-in time for a given date
+* Set their Clock-our time for a given date
+* App also contains a listing of all users with their times
 
-* Ruby version
+
+## Getting started (to run a local copy)
+
 
 * System dependencies
 
-* Configuration
+Ruby version: 2.3.1
+Rails version: 5.2.0
+Bundler version: 1.16.1
 
-* Database creation
 
-* Database initialization
+To get started with the app, clone the repo and then install the needed gems:
 
-* How to run the test suite
+```
+$ bundle install --without production
+```
 
-* Services (job queues, cache servers, search engines, etc.)
+Next, migrate the database:
 
-* Deployment instructions
+```
+$ rails db:migrate
+```
 
-* ...
+Finally run the app in a local server:
+
+```
+$ rails server
+```
+
+Open your browser at "localhost:3000".
+
+===================
+
+Testing environment not yet implemented.
+
+## Author
+
+* **Paul Rail** - [PolarisTLX](https://github.com/PolarisTLX)
